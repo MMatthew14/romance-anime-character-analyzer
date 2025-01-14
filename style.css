@@ -1,0 +1,90 @@
+body {
+  background: rgb(112, 88, 101);
+  color: #999;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+h1 {
+  color: rgb(224, 31, 31);
+}
+
+p {
+  height: 100px;
+}
+#source {
+  opacity: 0.2;
+}
+
+#source:hover {
+  opacity: 1;
+}
+
+#viz {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  margin: 3em auto;
+}
+
+a {
+  color: #3399ff;
+}
+
+.viz-seg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 0%;
+  background-color: rgb(112, 88, 101);
+  border-radius: 50% 0;
+  will-change: transform;
+}
+.container {
+  background-color: rgb(112, 88, 101);
+  padding: 0px;
+  border-radius: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #031cfd;
+}
+
+button {
+  background-color: #1da1f2; /* X's brand color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #1991db; /* Darker shade for hover */
+}
+p {
+  height: 50px;
+}
+#characterList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.character {
+  background-color: #1da1f2;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.character:hover {
+  background-color: #1991db;
+}
