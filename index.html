@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <body>
+     <div class="container min-h-screen font-mono font-extralight bg-[url('images/1f1j2akxrcm21.jpg')]">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width" />
+    <div class="container">
+      <h1>Romance Anime Character Analyzer</h1>
+      <p class=>Which Romance Anime character are you?</p>
+      <button id="loginButton">Login to your X account</button>
+    </div>
+     <script>
+    // Redirect to X OAuth URL
+    document.getElementById("loginButton").addEventListener("click", () => {
+      const clientId = "YOUR_X_CLIENT_ID"; // Replace with your X Client ID
+      const redirectUri = encodeURIComponent("http://localhost:5500/callback.html"); // Replace with your callback URL
+      const scope = encodeURIComponent("tweet.read users.read"); // Permissions you need
+      const state = "random_state_string"; // Optional: For security
+      const codeChallenge = "challenge"; // Required for PKCE
+      const codeChallengeMethod = "plain"; // Required for PKCE
+      const authUrl = `https://twitter.com/i/oauth2/authorize?response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}&state=${state}&code_challenge=challenge&code_challenge_method=plain`;
+
+      window.location.href = authUrl; // Redirect to X for authentication
+    });
+  </script>
+      <p>
+        By <a href="https://x.com/MMatt14" target="_blank">MMatt14</a>, <a href="https://x.com/shvm_mshra" target="_blank">Shivam</a> and Team 
+        <div id="viz">
+    </div>
+    <script src="file.js"></script>
+    
+  </body>
+</head>
+</html>
